@@ -6,15 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 import Link from "next/link";
 import ReactMarkdown from "react-markdown";
-import { Source_Code_Pro } from "next/font/google";
 import { WritingPost } from "@/shared/schema";
-
-const sourceCodePro = Source_Code_Pro({
-  variable: "--font-source-code-pro",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"],
-});
+import { sourceCodePro } from "@/lib/fonts";
 
 export default function WritingArticle({ writingPost }: { writingPost: WritingPost }) {
   const formattedDate = new Date(writingPost.publishedAt).toLocaleDateString("en-US", {

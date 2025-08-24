@@ -1,4 +1,4 @@
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { Mail, Twitter, Linkedin, CheckCircle } from "lucide-react";
 import type { Metadata } from "next";
 
@@ -43,11 +43,11 @@ export default function Contact() {
             <div className="max-w-4xl mx-auto px-6 items-center">
                 <div className="text-center mb-6">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Let's Connect 🔗
+                        Let&apos;s Connect 🔗
                     </h1>
                     <p className={`text-xl text-gray-600 max-w-2xl mx-auto ${sourceCodePro.className}`}>
                         Have a project in mind or want to collaborate on full-stack solutions?
-                        I'd love to hear from you.
+                        I&apos;d love to hear from you.
                     </p>
 
                 </div>

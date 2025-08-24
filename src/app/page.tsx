@@ -4,7 +4,7 @@ import ProjectCard from "@/components/project-card";
 import WritingCard from "@/components/writing-card";
 import { projects, writingPosts } from "@/storage/data";
 import Link from "next/link";
-import { sourceCodePro } from "@/layout"
+import { sourceCodePro } from "@/lib/fonts"
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function Home() {
               Featured Projects
             </h2>
             <p className={`text-xl text-gray-600 max-w-3xl mx-auto ${sourceCodePro.className}`}>
-              A collection of projects I've built to solve real problems and explore new technologies.
+              A collection of projects I&apos;ve built to solve real problems and explore new technologies.
             </p>
           </div>
           <div className="space-y-4">

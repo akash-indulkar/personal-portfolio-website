@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, Youtube, Download } from "lucide-react";
 import Link from "next/link";
-import { sourceCodePro, ebGaramond} from "@/layout"
+import { sourceCodePro, ebGaramond} from "@/lib/fonts"
 
 export default function HeroSection() {
   const socialLinks = [
@@ -41,7 +41,7 @@ export default function HeroSection() {
         <div className="">
           <div className="animate-fade-in justify-center">
             <div className="gap-8 mb-10 items-start max-w-5xl">
-                  <h1 className="text-center md:text-start text-5xl md:text-6xl font-bold text-gray-900 leading-tight"> Hello 👋, I'm <span className="text-primary text-blue-500">Akash!</span>
+                  <h1 className="text-center md:text-start text-5xl md:text-6xl font-bold text-gray-900 leading-tight"> Hello 👋, I&apos;m <span className="text-primary text-blue-500">Akash!</span>
                   </h1>
                   <h2 className={`text-center md:text-start text-2xl md:text-3xl font-semibold text-gray-700 italic mb-3 ${ebGaramond.className} italic`} > Developer / Thought Explorer / Photographer
                   </h2>
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
                 >
                   <p className={`text-lg md:text-xl leading-snug mb-3 ${sourceCodePro.className}`}>
-                    I'm a full-stack developer with an expert generalist mindset, working seamlessly across React.js, Spring Boot, Node.js, and Next.js to turn ideas into reality.
+                    I&apos;m a full-stack developer with an expert generalist mindset, working seamlessly across React.js, Spring Boot, Node.js, and Next.js to turn ideas into reality.
                   </p>
                   <p className={`text-lg md:text-xl leading-snug ${sourceCodePro.className}`}>
                     I thrive at the intersection of technical precision and existential curiosity — engineering robust solutions while exploring the deeper questions that define human existence. Between architecting systems and philosophical reflections, I capture life through my lens as a photographer.

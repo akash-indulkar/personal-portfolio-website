@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { WritingPost } from "@/shared/schema";
 import Link from "next/link";
 

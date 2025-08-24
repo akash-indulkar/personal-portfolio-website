@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/shared/schema";
 import Link from "next/link";
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 
 interface ProjectCardProps {
   project: Project;

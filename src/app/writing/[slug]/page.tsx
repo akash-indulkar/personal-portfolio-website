@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { writingPosts } from "@/storage/data";
 import WritingArticle from "@/components/writing-post";
+import { use } from "react";
 
-type Props = { params: { slug: string } };
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const writingPost = writingPosts.find((post) => post.slug === params.slug);
+export async function generateMetadata({ params }: {params : Promise<{ slug: string }>} ): Promise<Metadata> {
+  const { slug } = await params;
+  const writingPost = writingPosts.find((post) => post.slug === slug);
 
   if (!writingPost) {
     return {
@@ -20,8 +20,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default function WritingPostPage({ params }: Props) {
-  const writingPost = writingPosts.find((post) => post.slug === params.slug);
+export default function WritingPostPage({ params }: {params : Promise<{ slug: string }>}) {
+  const { slug } = use(params);
+  const writingPost = writingPosts.find((post) => post.slug === slug);
   if (!writingPost) {
     return null;
   }

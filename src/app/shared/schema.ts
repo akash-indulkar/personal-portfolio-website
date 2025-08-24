@@ -12,8 +12,6 @@ export interface Project {
   createdAt: Date;
 }
 
-export type InsertProject = Omit<Project, "id" | "createdAt">;
-
 export interface WritingPost {
   id: string;
   title: string;
@@ -27,15 +25,3 @@ export interface WritingPost {
   publishedAt: Date;
   createdAt: Date;
 }
-
-export type InsertWritingPost = Omit<WritingPost, "id" | "createdAt">;
-
-export interface ContactMessage {
-  id: string;
-  name: string;
-  email: string;
-  message: string;
-  createdAt: Date;
-}
-
-export type InsertContactMessage = Omit<ContactMessage, "id" | "createdAt">;

@@ -1,5 +1,5 @@
 import WritingCard from "@/components/writing-card";
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { writingPosts } from "@/storage/data";
 import type { Metadata } from "next";
 
@@ -19,7 +19,7 @@ export default function Writings() {
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
                         All Writings 📝
                     </h1>
-                    <p className={`text-xl text-gray-600 max-w-3xl mx-auto ${sourceCodePro.className}`}>Deep dives into web development, microservices, philosophy, and human psychology. Basically sharing thoughts and lessons I've picked up along the way in tech and life.
+                    <p className={`text-xl text-gray-600 max-w-3xl mx-auto ${sourceCodePro.className}`}>Deep dives into web development, microservices, philosophy, and human psychology. Basically sharing thoughts and lessons I&apos;ve picked up along the way in tech and life.
                     </p>
                 </div>
                 {writingPosts && writingPosts.length > 0 ? (

@@ -1,5 +1,5 @@
 import ProjectCard from "@/components/project-card";
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { projects } from "@/storage/data";
 import { Github } from "lucide-react";
 import { Metadata } from "next";
@@ -21,7 +21,7 @@ export default function Projects() {
                         All Projects {emoji}
                     </h1>
                     <p className={`text-xl text-gray-600 max-w-3xl mx-auto ${sourceCodePro.className}`}>
-                        A comprehensive collection of projects where I've built scalable microservices, developed solid backend systems, and designed clean, easy-to-use frontends.
+                        A comprehensive collection of projects where I&apos;ve built scalable microservices, developed solid backend systems, and designed clean, easy-to-use frontends.
                     </p>
                 </div>
                 {projects && projects.length > 0 ? (

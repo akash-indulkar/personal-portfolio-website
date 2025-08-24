@@ -4,11 +4,13 @@ import { ExternalLink, Github, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { projects } from "@/storage/data";
 import ReactMarkdown from "react-markdown";
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { Metadata } from "next";
+import { use } from "react";
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
-  const project = projects.find((p) => p.id === params.id);
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
   if (!project) {
     return {
       title: "Project Not Found",
@@ -21,9 +23,9 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   };
 }
 
-export default function ProjectDetail({ params }: { params: { id: string } }) {
-  const projectId = params.id;
-  const project = projects.find(p => p.id === projectId);
+export default function ProjectDetail({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = use(params);
+  const project = projects.find(p => p.id === id);
 
   if (!project) {
     return null;

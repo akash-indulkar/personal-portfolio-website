@@ -5,21 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Source_Code_Pro, Noto_Sans_Display } from "next/font/google";
-
-const sourceCodePro = Source_Code_Pro({
-  variable: "--font-source-code-pro",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"]
-});
-
-const notoSansDisplay = Noto_Sans_Display({
-  variable: "--font-noto-sans-display",
-  subsets: ["latin"],
-  weight: ["500"],
-  style: ["normal", "italic"]
-});
+import { notoSansDisplay, sourceCodePro } from "@/lib/fonts";
 
 export default function Navigation() {
   const location = usePathname();

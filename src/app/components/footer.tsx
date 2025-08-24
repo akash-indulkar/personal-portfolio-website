@@ -1,4 +1,4 @@
-import { sourceCodePro } from "@/layout";
+import { sourceCodePro } from "@/lib/fonts";
 import { Github, Linkedin, Twitter, Youtube } from "lucide-react";
 import Link from "next/link";
 

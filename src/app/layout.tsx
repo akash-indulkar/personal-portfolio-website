@@ -1,5 +1,4 @@
-import type { Metadata } from "next";
-import { EB_Garamond, Geist, Geist_Mono, Source_Code_Pro } from "next/font/google";
+import { Geist, Geist_Mono} from "next/font/google";
 import Footer from "@/components/footer";
 import Navigation from "@/components/navigation";
 import "./globals.css";
@@ -12,20 +11,6 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-});
-
-export const sourceCodePro = Source_Code_Pro({
-  variable: "--font-source-code-pro",
-  subsets: ["latin"],
-  weight: ["400"],
-  style: ["normal", "italic"]
-});
-
-export const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
-  subsets: ["latin"],
-  weight: ["500"],
-  style: ["normal", "italic"]
 });
 
 export default function RootLayout({

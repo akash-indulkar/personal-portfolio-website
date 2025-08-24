@@ -1,4 +1,4 @@
-import { type Project, type WritingPost, type ContactMessage } from "@/shared/schema";
+import { type Project, type WritingPost } from "@/shared/schema";
 
 export const projects: Project[] = [
   {
@@ -142,7 +142,7 @@ Integrated OpenGraph metadata to ensure projects and blog posts display rich pre
 
 Responsive Design:
 Optimized layouts for mobile, tablet, and desktop users, ensuring accessibility and smooth interaction across all screen sizes.`,
-    imageUrl: "https://res.cloudinary.com/dadualj4l/image/upload/v1756011205/my-personal-website-home_plfz22.png",
+    imageUrl: "https://res.cloudinary.com/dadualj4l/image/upload/v1756029784/personal-portfolio-website-home_nozqpf.png",
     liveUrl: "https://akashindulkar.in",
     githubUrl: "https://github.com/akash-indulkar/personal-portfolio-website",
     techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
