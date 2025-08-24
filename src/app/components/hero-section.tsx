@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Twitter, Youtube, Download } from "lucide-react";
 import Link from "next/link";
-import { sourceCodePro, ebGaramond} from "@/lib/fonts"
+import { sourceCodePro, ebGaramond } from "@/lib/fonts"
+import Image from "next/image";
 
 export default function HeroSection() {
   const socialLinks = [
@@ -41,15 +42,18 @@ export default function HeroSection() {
         <div className="">
           <div className="animate-fade-in justify-center">
             <div className="gap-8 mb-10 items-start max-w-5xl">
-                  <h1 className="text-center md:text-start text-5xl md:text-6xl font-bold text-gray-900 leading-tight"> Hello 👋, I&apos;m <span className="text-primary text-blue-500">Akash!</span>
-                  </h1>
-                  <h2 className={`text-center md:text-start text-2xl md:text-3xl font-semibold text-gray-700 italic mb-3 ${ebGaramond.className} italic`} > Developer / Thought Explorer / Photographer
-                  </h2>
+              <h1 className="text-center md:text-start text-5xl md:text-6xl font-bold text-gray-900 leading-tight"> Hello 👋, I&apos;m <span className="text-primary text-blue-500">Akash!</span>
+              </h1>
+              <h2 className={`text-center md:text-start text-2xl md:text-3xl font-semibold text-gray-700 italic mb-3 ${ebGaramond.className} italic`} > Developer / Thought Explorer / Photographer
+              </h2>
               <div className="flex flex-col md:flex-row items-center w-full">
                 <div className="order-1 md:order-2  flex justify-center mb-5 md:mb-0 md:w-1/3">
-                  <img
+                  <Image
                     src="https://res.cloudinary.com/dadualj4l/image/upload/v1755787541/web-profile_qnjxjb.png"
                     alt="Akash profile picture"
+                    width={250}
+                    height={250}
+                    quality={100}
                     className="w-56 md:w-64 aspect-square rounded-4xl shadow-xl object-cover border-4 border-green-100 hover:scale-105 transition-transform duration-300"
                   />
                 </div>

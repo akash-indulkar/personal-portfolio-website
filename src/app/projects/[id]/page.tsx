@@ -7,6 +7,7 @@ import ReactMarkdown from "react-markdown";
 import { sourceCodePro } from "@/lib/fonts";
 import { Metadata } from "next";
 import { use } from "react";
+import Image from "next/image";
 
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
@@ -43,11 +44,13 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
 
         <div className="bg-white rounded-xl shadow-sm overflow-hidden">
           {project.imageUrl && (
-            <img
+            <Image
               src={project.imageUrl}
               alt={project.title}
+              width={250}
+              height={250}
+              quality={100}
               className="w-full h-64 md:h-80 object-cover"
-
             />
           )}
 
@@ -77,11 +80,13 @@ export default function ProjectDetail({ params }: { params: Promise<{ id: string
                 <h2 className="text-xl font-semibold pb-2">About this Project</h2>
                 {project.architecture && (
                   <div className="text-gray-900">
-                    <img
+                    <Image
                       src={project.architecture}
                       alt={`${project.title} Architecture`}
+                      width={250}
+                      height={250}
+                      quality={100}
                       className="w-full h-auto mb-2 rounded-lg border"
-
                     />
                     <p className="text-base font-semibold mb-4 text-center">Project Architecture</p>
                   </div>

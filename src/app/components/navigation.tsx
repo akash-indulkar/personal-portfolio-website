@@ -25,7 +25,7 @@ export default function Navigation() {
         bg-white/70 backdrop-blur-md border-b border-gray-50"
 
       >
-        <div className="mx-auto px-10 h-16 flex items-center justify-between">
+        <div className="mx-auto px-7 md:px-10 h-16 flex items-center justify-between">
           <Link href="/">
             <span className={`text-2xl font-medium text-gray-900 hover:text-blue-500 transition-colors duration-200 ${notoSansDisplay.className}`}>
               Akash Indulkar<span className="text-blue-500">.</span>

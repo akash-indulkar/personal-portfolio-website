@@ -4,6 +4,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/shared/schema";
 import Link from "next/link";
 import { sourceCodePro } from "@/lib/fonts";
+import Image from "next/image";
 
 interface ProjectCardProps {
   project: Project;
@@ -19,11 +20,13 @@ export default function ProjectCard({ project, featured = true, showActions = tr
           {project.imageUrl && (
             <div className="md:w-1/2">
               <Link href={`/projects/${project.id}`}>
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
+                  width={250}
+                  height={250}
+                  quality={100}
                   className="w-full h-64 md:h-full object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
-
                 />
               </Link>
             </div>
@@ -39,9 +42,9 @@ export default function ProjectCard({ project, featured = true, showActions = tr
             </p>
             <div className="flex flex-wrap gap-3 mb-6">
               {project.techStack.map((tech) => (
-                <Badge 
-                  key={tech} 
-                  variant="outline" 
+                <Badge
+                  key={tech}
+                  variant="outline"
                   className="text-sm px-3 py-1 bg-white text-primary border-primary/20"
 
                 >
@@ -53,8 +56,8 @@ export default function ProjectCard({ project, featured = true, showActions = tr
               <div className="flex flex-wrap gap-4">
                 {project.liveUrl && (
                   <a
-                  href={project.liveUrl}
-                  target="_blank"
+                    href={project.liveUrl}
+                    target="_blank"
                     rel="noopener noreferrer"
 
                   >
@@ -115,9 +118,12 @@ export default function ProjectCard({ project, featured = true, showActions = tr
     <div className="project-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 overflow-hidden group">
       {project.imageUrl && (
         <Link href={`/projects/${project.id}`}>
-          <img
+          <Image
             src={project.imageUrl}
             alt={project.title}
+            width={250}
+            height={250}
+            quality={100}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300 cursor-pointer"
 
           />
@@ -134,9 +140,9 @@ export default function ProjectCard({ project, featured = true, showActions = tr
         </p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.techStack.map((tech) => (
-            <Badge 
-              key={tech} 
-              variant="outline" 
+            <Badge
+              key={tech}
+              variant="outline"
               className="text-xs bg-white border-primary/20"
 
             >

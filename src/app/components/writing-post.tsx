@@ -8,29 +8,30 @@ import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 import { WritingPost } from "@/shared/schema";
 import { sourceCodePro } from "@/lib/fonts";
+import Image from "next/image";
 
 export default function WritingArticle({ writingPost }: { writingPost: WritingPost }) {
-  const formattedDate = new Date(writingPost.publishedAt).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
+    const formattedDate = new Date(writingPost.publishedAt).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: writingPost.title,
-          text: writingPost.excerpt,
-          url: window.location.href,
-        });
-      } catch (err) {
-        navigator.clipboard.writeText(window.location.href);
-      }
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-    }
-  };
+    const handleShare = async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: writingPost.title,
+                    text: writingPost.excerpt,
+                    url: window.location.href,
+                });
+            } catch (err) {
+                navigator.clipboard.writeText(window.location.href);
+            }
+        } else {
+            navigator.clipboard.writeText(window.location.href);
+        }
+    };
     return (
         <div className="min-h-screen py-20 bg-gray-50">
             <div className="max-w-4xl mx-auto px-6">
@@ -88,11 +89,13 @@ export default function WritingArticle({ writingPost }: { writingPost: WritingPo
                         </div>
                         {writingPost.imageUrl && (
                             <div className="text-gray-900">
-                                <img
+                                <Image
                                     src={writingPost.imageUrl}
                                     alt={`${writingPost.title} Architecture`}
+                                    width={250}
+                                    height={250}
+                                    quality={100}
                                     className="w-full h-auto mb-2 rounded-lg border"
-
                                 />
                             </div>
                         )}
