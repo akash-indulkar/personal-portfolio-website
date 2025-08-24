@@ -39,7 +39,7 @@ export default function Contact() {
     ];
 
     return (
-        <div className="min-h-screen py-20 bg-gray-50">
+        <div className="py-20 bg-gray-50">
             <div className="max-w-4xl mx-auto px-6 items-center">
                 <div className="text-center mb-6">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

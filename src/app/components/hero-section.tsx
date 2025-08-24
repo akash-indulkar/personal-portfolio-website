@@ -37,7 +37,7 @@ export default function HeroSection() {
   ];
 
   return (
-    <section className="min-h-screen flex items-center bg-white">
+    <section className="flex items-center bg-white">
       <div className=" mx-auto px-6 py-10">
         <div className="">
           <div className="animate-fade-in justify-center">
@@ -49,7 +49,7 @@ export default function HeroSection() {
               <div className="flex flex-col md:flex-row items-center w-full">
                 <div className="order-1 md:order-2  flex justify-center mb-5 md:mb-0 md:w-1/3">
                   <Image
-                    src="https://res.cloudinary.com/dadualj4l/image/upload/v1755787541/web-profile_qnjxjb.png"
+                    src="https://res.cloudinary.com/dadualj4l/image/upload/v1756046227/web-profile-picture_g8ayci.png"
                     alt="Akash profile picture"
                     width={250}
                     height={250}

@@ -33,7 +33,7 @@ export default function WritingArticle({ writingPost }: { writingPost: WritingPo
         }
     };
     return (
-        <div className="min-h-screen py-20 bg-gray-50">
+        <div className="py-20 bg-gray-50">
             <div className="max-w-4xl mx-auto px-6">
                 <Link href="/writings">
                     <Button variant="ghost" className="mb-8">

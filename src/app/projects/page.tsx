@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function Projects() {
     const emoji = "</>";
     return (
-        <div className="min-h-screen py-10 mt-10 bg-gray-50">
+        <div className="py-10 mt-10 bg-gray-50">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">

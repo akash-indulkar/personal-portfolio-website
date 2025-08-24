@@ -21,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" type="image/png" href="https://res.cloudinary.com/dadualj4l/image/upload/v1755787541/web-profile_qnjxjb.png" />
+        <link rel="icon" type="image/png" href="https://res.cloudinary.com/dadualj4l/image/upload/v1756046227/web-profile-picture_g8ayci.png" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} flex flex-col min-h-screen antialiased`}
       >
         <Navigation />
-        {children}
+        <main className="flex-grow">
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

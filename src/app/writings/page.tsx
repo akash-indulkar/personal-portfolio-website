@@ -13,7 +13,7 @@ export default function Writings() {
     const regularPosts = writingPosts?.filter(post => !post.featured) || [];
 
     return (
-        <div className="min-h-screen py-20 bg-white">
+        <div className="py-20 bg-white">
             <div className="max-w-6xl mx-auto px-6">
                 <div className="text-center mb-8">
                     <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
