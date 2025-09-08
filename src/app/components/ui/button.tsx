@@ -17,7 +17,7 @@ const Button: React.FC<ButtonProps> = ({
     default: "bg-blue-500 text-white hover:cursor-pointer",
     outline: "hover:text-blue-500 border border-gray-300 bg-white text-gray-800 hover:bg-blue-100 hover:cursor-pointer",
     destructive: "bg-red-600 text-white hover:bg-red-700 hover:cursor-pointer",
-    ghost: `px-4 py-2 rounded-lg font-medium border border-gray-300 md:border-none md:bg-transparent bg-white text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-200`
+    ghost: `px-4 py-2 rounded-lg font-medium border border-gray-300 md:border-none md:bg-transparent bg-white text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-all duration-200 hover:cursor-pointer`
   };
 
   const sizes: Record<string, string> = {

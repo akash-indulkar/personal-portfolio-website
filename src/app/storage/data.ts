@@ -39,7 +39,7 @@ BlinkFlow was deployed to AWS EC2 instance using Docker containers, with Nginx c
     imageUrl: "https://res.cloudinary.com/dadualj4l/image/upload/v1755872299/BlinkFlow_-_Home_hpxbmv.png",
     liveUrl: "https://blinkflow.akashindulkar.in",
     githubUrl: "https://github.com/akash-indulkar/BlinkFlow",
-    architecture: "https://res.cloudinary.com/dadualj4l/image/upload/v1755966294/BlinkFlow-architecture_bsq1at.png",
+    architecture: "https://res.cloudinary.com/dadualj4l/image/upload/v1757300694/BlinkFlow-architecture_bsq1at.png",
     techStack: ["React.js", "TypeScript", "React Flow", "Tailwind CSS", "GroqAPI", "openai/gpt-oss-120b",  "Spring Boot", "MySQL", "Kafka", "Redis", "Docker", "AWS"],
     featured: true,
     createdAt: new Date("2024-03-20"),
@@ -327,7 +327,7 @@ Scenario A: Database write succeeds, message publishing fails
 Scenario B: Message gets published, database transaction rolls back  
 Both outcomes create data inconsistency—a silent killer that corrupts your entire system's integrity.  
 • Why This Mattered for BlinkFlow:  
-We encountered this exact challenge while building BlinkFlow, our automation platform that connects applications like Zapier does. Since BlinkFlow orchestrates workflows across multiple microservices using event streams, losing even a single trigger could break entire user automations.
+We encountered this exact challenge while building BlinkFlow, our automation platform that connects applications like Zapier does. Since BlinkFlow orchestrates workflows across multiple microservices using event streams, losing even a single trigger could break entire user automations.  
 Our backend architecture consists of four core services:  
 Primary Backend — handles authentication and workflow management  
 Flowrun Listener — captures incoming webhook triggers and logs them  
@@ -357,7 +357,7 @@ Publishes these events to Kafka
 Marks records as processed only after confirmed delivery  
 
 Phase 3: Action Execution (Flowrun Executor)—  
-The executor consumes Kafka messages and triggers user-defined actions like API calls, email sends, or data storage operations.
+The executor consumes Kafka messages and triggers user-defined actions like API calls, email sends, or data storage operations.  
 • The Transformative Benefits:  
 Absolute Reliability: Events never vanish, even during Kafka outages or network failures  
 Clean Separation: Our listener remains completely decoupled from Kafka infrastructure  
